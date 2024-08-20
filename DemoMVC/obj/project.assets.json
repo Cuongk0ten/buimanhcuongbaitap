@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\Bmcc\\DemoMVC\\DemoMVC.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "projectName": "DemoMVC",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\Bmcc\\DemoMVC\\DemoMVC.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\Bmcc\\DemoMVC\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\PTPMQL\\DemoMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
