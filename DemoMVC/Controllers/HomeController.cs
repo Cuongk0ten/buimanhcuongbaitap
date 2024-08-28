@@ -6,12 +6,6 @@ namespace DemoMVC.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
 
     public IActionResult Index()
     {
@@ -36,4 +30,19 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    public IActionResult Demo()
+    {
+        return View();
+    }
+
+
+    [HttpPost]
+    public IActionResult Demo(string FullName)
+    {
+        string str0utput = "xin chao " + FullName;
+        ViewBag.Message = str0utput;
+        return View();
+    }
+
+
 }

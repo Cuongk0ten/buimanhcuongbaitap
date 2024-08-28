@@ -5,7 +5,8 @@ namespace DemoMVC.Models
     public class Student
     {
         [Key]
-        public int StudentID { get; set; }
-        public string FullName { get; set; }
+        public int Mahocsinh { get; set; }
+        public string Hoten { get; set; }
+        public string Quequan { get; set; }
     }
 }
