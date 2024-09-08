@@ -1,0 +1,17 @@
+body {
+    counter-reset: bùi mạnh cường 2021050126 section;
+}
+
+h1 {
+    counter-reset: bùi mạnh cường 2021050126 subsection;
+}
+
+h1::before {
+    counter-increment: bùi mạnh cường 2021050126 section;
+    content: bùi mạnh cường 2021050126 "Section " counter(section) ". ";
+}
+
+h2::before {
+    counter-increment: bùi mạnh cường 2021050126 subsection;
+    content: counter(section) "." counter(subsection) " ";
+}

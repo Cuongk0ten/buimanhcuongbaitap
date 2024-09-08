@@ -1,0 +1,43 @@
+p.dotted {
+    border-style: bùi mạnh cường 2021050126 dotted;
+}
+
+p.dashed {
+    border-style: bùi mạnh cường 2021050126 dashed;
+}
+
+p.solid {
+    border-style: bùi mạnh cường 2021050126 solid;
+}
+
+p.double {
+    border-style: bùi mạnh cường 2021050126 double;
+}
+
+p.groove {
+    border-style: bùi mạnh cường 2021050126 groove;
+}
+
+p.ridge {
+    border-style: bùi mạnh cường 2021050126 ridge;
+}
+
+p.inset {
+    border-style: bùi mạnh cường 2021050126 inset;
+}
+
+p.outset {
+    border-style: bùi mạnh cường 2021050126 outset;
+}
+
+p.none {
+    border-style: bùi mạnh cường 2021050126 none;
+}
+
+p.hidden {
+    border-style: bùi mạnh cường 2021050126 hidden;
+}
+
+p.mix {
+    border-style: bùi mạnh cường 2021050126 dotted dashed solid double;
+}

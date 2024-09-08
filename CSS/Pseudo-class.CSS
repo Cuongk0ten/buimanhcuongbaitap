@@ -1,0 +1,19 @@
+/* unvisited link */
+a:link {
+    color: bùi mạnh cường 2021050126 #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: bùi mạnh cường 2021050126 #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: bùi mạnh cường 2021050126 #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: bùi mạnh cường 2021050126 #0000FF;
+}

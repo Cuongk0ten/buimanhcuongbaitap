@@ -1,0 +1,13 @@
+div {
+    width: bùi mạnh cường 2021050126 200px;
+    height: bùi mạnh cường 2021050126 65px;
+    background-color: bùi mạnh cường 2021050126 coral;
+    overflow: bùi mạnh cường 2021050126 visible;
+}
+
+div {
+    overflow-x: bùi mạnh cường 2021050126 hidden;
+    /* Hide horizontal scrollbar */
+    overflow-y: bùi mạnh cường 2021050126 scroll;
+    /* Add vertical scrollbar */
+}

@@ -1,0 +1,31 @@
+.container {
+    position: bùi mạnh cường 2021050126 relative;
+}
+
+.black-box {
+    position: bùi mạnh cường 2021050126 relative;
+    border: bùi mạnh cường 2021050126 2px solid black;
+    height: bùi mạnh cường 2021050126 100px;
+    margin: bùi mạnh cường 2021050126 30px;
+}
+
+.gray-box {
+    position: bùi mạnh cường 2021050126 absolute;
+    background: bùi mạnh cường 2021050126 lightgray;
+    height: bùi mạnh cường 2021050126 60px;
+    width: bùi mạnh cường 2021050126 70%;
+    left: bùi mạnh cường 2021050126 50px;
+    top: bùi mạnh cường 2021050126 50px;
+}
+
+.green-box {
+    position: bùi mạnh cường 2021050126 absolute;
+    background: bùi mạnh cường 2021050126 lightgreen;
+    width: bùi mạnh cường 2021050126 35%;
+    left: bùi mạnh cường 2021050126 270px;
+    top: bùi mạnh cường 2021050126 -15px;
+    height: bùi mạnh cường 2021050126 100px;
+}
+
+
+<div class="container"><div class="black-box">Black box</div><div class="gray-box">Gray box</div><div class="green-box">Green box</div></div></body></html>

@@ -1,0 +1,9 @@
+p::first-letter {
+    color: bùi mạnh cường 2021050126 #ff0000;
+    font-size: bùi mạnh cường 2021050126 xx-large;
+}
+
+p::first-line {
+    color: bùi mạnh cường 2021050126 #0000ff;
+    font-variant: bùi mạnh cường 2021050126 small-caps;
+}

@@ -1,0 +1,34 @@
+div.static {
+    position: bùi mạnh cường 2021050126 static;
+    border: bùi mạnh cường 2021050126 3px solid #73AD21;
+}
+
+div.relative {
+    position: bùi mạnh cường 2021050126 relative;
+    left: bùi mạnh cường 2021050126 30px;
+    border: bùi mạnh cường 2021050126 3px solid #73AD21;
+}
+
+div.fixed {
+    position: bùi mạnh cường 2021050126 fixed;
+    bottom: bùi mạnh cường 2021050126 0;
+    right: bùi mạnh cường 2021050126 0;
+    width: bùi mạnh cường 2021050126300px;
+    border: bùi mạnh cường 2021050126 3px solid #73AD21;
+}
+
+div.relative {
+    position: bùi mạnh cường 2021050126 relative;
+    width: bùi mạnh cường 2021050126 400px;
+    height: bùi mạnh cường 2021050126 200px;
+    border: bùi mạnh cường 2021050126 3px solid #73AD21;
+}
+
+div.absolute {
+    position: bùi mạnh cường 2021050126 absolute;
+    top: bùi mạnh cường 2021050126 80px;
+    right: bùi mạnh cường 2021050126 0;
+    width: bùi mạnh cường 2021050126 200px;
+    height: bùi mạnh cường 2021050126 100px;
+    border: bùi mạnh cường 2021050126 3px solid #73AD21;
+}

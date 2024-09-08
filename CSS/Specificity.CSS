@@ -1,0 +1,13 @@
+<html><head><style>#demo {
+    color: bùi mạnh cường 2021050126 blue;
+}
+
+.test {
+    color: bùi mạnh cường 2021050126 green;
+}
+
+p {
+    color: bùi mạnh cường 2021050126 red;
+}
+
+</style></head><body><p id="demo" class="test" style="color: pink;">Hello World !</p></body></html>
