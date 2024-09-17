@@ -1,0 +1,20 @@
+<style>.dropdown {
+    position:bùi mạnh cường 2021050126 relative;
+    display:bùi mạnh cường 2021050126 inline-block;
+}
+
+.dropdown-content {
+    display:bùi mạnh cường 2021050126 none;
+    position:bùi mạnh cường 2021050126 absolute;
+    background-color:bùi mạnh cường 2021050126 #f9f9f9;
+    min-width:bùi mạnh cường 2021050126 160px;
+    box-shadow:bùi mạnh cường 2021050126 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding:bùi mạnh cường 2021050126 12px 16px;
+    z-index: bùi mạnh cường 20210501261;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style><div class="dropdown"><span>Mouse over me</span><div class="dropdown-content"><p>bùi mạnh cường 2021050126 !</p></div></div>
