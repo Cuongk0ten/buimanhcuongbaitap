@@ -1,10 +1,48 @@
-<form asp-action="Index">
-    <label>Nhap PersonId</label>
-    <input type="text" name="PersonId">
-    <label>Nhap ho ten:</label>
-    <input type="text" name="FullName">
-    <label>Nhap dia chi:</label>
-    <input type="text" name="Address">
-    <input type="submit" value="Gui du lieu">
-</form>
-<h1>Du lieu tu Controller gui ve la: @ViewBag.infoPerson</h1>
+@model IEnumerable<DemoMVC.Models.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hoten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quequan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cancuoccongdan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hoten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quequan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cancuoccongdan)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.cancuoccongdan">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.cancuoccongdan">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.cancuoccongdan">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -10,22 +10,22 @@ using DemoMVC.Models;
 
 namespace DemoMVC.Controllers
 {
-    public class PersonController : Controller
+    public class EmployeeeController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public PersonController(ApplicationDbContext context)
+        public EmployeeeController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Person
+        // GET: Employeee
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Person.ToListAsync());
+            return View(await _context.Employeee.ToListAsync());
         }
 
-        // GET: Person/Details/5
+        // GET: Employeee/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace DemoMVC.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var employeee = await _context.Employeee
                 .FirstOrDefaultAsync(m => m.cancuoccongdan == id);
-            if (person == null)
+            if (employeee == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(employeee);
         }
 
-        // GET: Person/Create
+        // GET: Employeee/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Person/Create
+        // POST: Employeee/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("cancuoccongdan,hoten,quequan")] Person person)
+        public async Task<IActionResult> Create([Bind("cancuoccongdan,hoten,quequan")] Employeee employeee)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(employeee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(employeee);
         }
 
-        // GET: Person/Edit/5
+        // GET: Employeee/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace DemoMVC.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var employeee = await _context.Employeee.FindAsync(id);
+            if (employeee == null)
             {
                 return NotFound();
             }
-            return View(person);
+            return View(employeee);
         }
 
-        // POST: Person/Edit/5
+        // POST: Employeee/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("cancuoccongdan,hoten,quequan")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("cancuoccongdan,hoten,quequan")] Employeee employeee)
         {
-            if (id != person.cancuoccongdan)
+            if (id != employeee.cancuoccongdan)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace DemoMVC.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(employeee);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.cancuoccongdan))
+                    if (!EmployeeeExists(employeee.cancuoccongdan))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace DemoMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(employeee);
         }
 
-        // GET: Person/Delete/5
+        // GET: Employeee/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -124,34 +124,34 @@ namespace DemoMVC.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var employeee = await _context.Employeee
                 .FirstOrDefaultAsync(m => m.cancuoccongdan == id);
-            if (person == null)
+            if (employeee == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(employeee);
         }
 
-        // POST: Person/Delete/5
+        // POST: Employeee/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var person = await _context.Person.FindAsync(id);
-            if (person != null)
+            var employeee = await _context.Employeee.FindAsync(id);
+            if (employeee != null)
             {
-                _context.Person.Remove(person);
+                _context.Employeee.Remove(employeee);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(string id)
+        private bool EmployeeeExists(string id)
         {
-            return _context.Person.Any(e => e.cancuoccongdan == id);
+            return _context.Employeee.Any(e => e.cancuoccongdan == id);
         }
     }
 }

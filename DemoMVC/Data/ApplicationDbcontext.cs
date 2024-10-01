@@ -8,6 +8,8 @@ namespace DemoMVC.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<LopHoc> LopHocs { get; set; }
+        public DbSet<Person> Person { get; set; }
+        public DbSet<DemoMVC.Models.Employeee> Employeee { get; set; } = default!;
+
     }
 }
