@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241001070509_Create_Table_Person")]
+    [Migration("20241001075313_Create_Table_Person")]
     partial class Create_Table_Person
     {
         /// <inheritdoc />
@@ -49,6 +49,10 @@ namespace DemoMVC.Migrations
             modelBuilder.Entity("DemoMVC.Models.Employeee", b =>
                 {
                     b.HasBaseType("DemoMVC.Models.Person");
+
+                    b.Property<string>("StudenID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("Employeee");
                 });

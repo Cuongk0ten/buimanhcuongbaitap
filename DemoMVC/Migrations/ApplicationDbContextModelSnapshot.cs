@@ -47,6 +47,14 @@ namespace DemoMVC.Migrations
                 {
                     b.HasBaseType("DemoMVC.Models.Person");
 
+                    b.Property<string>("EmployeeeID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SDT")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasDiscriminator().HasValue("Employeee");
                 });
 #pragma warning restore 612, 618

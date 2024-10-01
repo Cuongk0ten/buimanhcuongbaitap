@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241001025453_Create_Table_Employeee")]
+    [Migration("20241001075701_Create_Table_Employeee")]
     partial class Create_Table_Employeee
     {
         /// <inheritdoc />
@@ -18,28 +18,6 @@ namespace DemoMVC.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
-
-            modelBuilder.Entity("DemoMVC.Models.Employee", b =>
-                {
-                    b.Property<string>("StudenID")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Tuoi")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("StudenID");
-
-                    b.ToTable("Employees");
-                });
 
             modelBuilder.Entity("DemoMVC.Models.Person", b =>
                 {
@@ -71,6 +49,14 @@ namespace DemoMVC.Migrations
             modelBuilder.Entity("DemoMVC.Models.Employeee", b =>
                 {
                     b.HasBaseType("DemoMVC.Models.Person");
+
+                    b.Property<string>("EmployeeeID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SDT")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("Employeee");
                 });

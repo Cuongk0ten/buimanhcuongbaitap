@@ -10,21 +10,29 @@ namespace DemoMVC.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "StudenID",
+                table: "Person",
+                newName: "SDT");
+
             migrationBuilder.AddColumn<string>(
-                name: "Discriminator",
+                name: "EmployeeeID",
                 table: "Person",
                 type: "TEXT",
-                maxLength: 13,
-                nullable: false,
-                defaultValue: "");
+                nullable: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Discriminator",
+                name: "EmployeeeID",
                 table: "Person");
+
+            migrationBuilder.RenameColumn(
+                name: "SDT",
+                table: "Person",
+                newName: "StudenID");
         }
     }
 }
