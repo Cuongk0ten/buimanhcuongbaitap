@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240917072001_Add_Column_Employee_Tuoi")]
-    partial class Add_Column_Employee_Tuoi
+    [Migration("20241001070509_Create_Table_Person")]
+    partial class Create_Table_Person
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,26 +19,38 @@ namespace DemoMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("DemoMVC.Models.Employee", b =>
+            modelBuilder.Entity("DemoMVC.Models.Person", b =>
                 {
-                    b.Property<string>("StudenID")
+                    b.Property<string>("cancuoccongdan")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Address")
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("hoten")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("quequan")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Tuoi")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasKey("cancuoccongdan");
 
-                    b.HasKey("StudenID");
+                    b.ToTable("Person");
 
-                    b.ToTable("Employees");
+                    b.HasDiscriminator().HasValue("Person");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("DemoMVC.Models.Employeee", b =>
+                {
+                    b.HasBaseType("DemoMVC.Models.Person");
+
+                    b.HasDiscriminator().HasValue("Employeee");
                 });
 #pragma warning restore 612, 618
         }
